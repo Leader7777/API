@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>API</title>
+</head>
+<body>
+    <header class="container">
+        <h1 class="h1 text-center my-2"> Users API </h1>
+    </header>
+
+    <main class="container">
+        <div class="row border border-3 p-2 gap-2">
+            <div class="col">
+                <h2 class="h2">Users</h2>
+                <p>Count of users: <span id="countOfUsers"></span></p>
+                <ul class="list-group gap-2" id="usersList">
+
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="h2">Posts</h2>
+                <p>Count of posts: <span id="countOfPosts"></span></p>
+                <ul class="list-group gap-2" id="postsList">
+            
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="h2">Comments</h2>
+                <p>Count of comments: <span id="countOfComments">0</span></p>
+                <ul class="list-group gap-2" id="commentList">
+                   
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <template id="userTemplate">
+        <li class="border border-3 border-primary list-unstyled p-2 fw-bold">
+            <span style="color: blue; text-decoration: underline;" id="userName"></span>
+            <p class="m-0">Email: <span id="userEmail"></span></p>
+            <p class="m-0">Country: <span id="userCountry"></span></p>
+            <p class="m-0">Company: <span id="userCompany"></span></p>
+            <p class="m-0">Website: <a style="color: blue;text-decoration: underline;" id="userWebSite"></a></p>
+        </li>
+    </template>
+
+    <template id="postTemplate">
+        <li class="border border-3 border-primary list-unstyled p-2 fw-bold">
+            <a style="color: blue;text-decoration: underline;" id="userPostName"></a>
+            <p class="m-0">Post: <span class="fw-normal" id="userPost"></span></p>
+        </li>
+    </template>
+
+    <template id="commentTemplate">
+        <li class="border border-3 border-primary list-unstyled p-2 fw-bold">
+            <p class="m-0">Title: <span id="commentsName"></span></p>
+            <p class="m-0">Email: <a style="color: blue;text-decoration: underline;" id="commentsEmail">Salom</a></p>
+            <p>Comment: <span class="fw-normal" id="comments"></span></p>
+          </li>
+    </template>
+    
+
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
